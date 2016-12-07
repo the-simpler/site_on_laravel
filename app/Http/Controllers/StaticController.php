@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Maintext;
 
 class StaticController extends Controller
 {
     public function getIndex($id=null){
-    	return view('static')->with('id', $id);
+    	$text = Maintext::where('url',$id)->first();
+    	return view('static')->with('text', $text);
     }
 }

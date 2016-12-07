@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Neucha');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Neucha', cursive;
+}
+
+html,
+body {
+    color: #636b6f;
+    font-weight: 100;
+    height: 100%;
+}
+
+.header-main {
+    display: block;
+    position: relative;
+    /* Для старых браузеров */
+    height: 130px;
+    width: 100%;
+    /*background: url(../images/bg-header.png) repeat-x;*/
+    background-color: #1B1F20;
+}
+
+header .logo {
+   float:left;
+    margin: 25px;
+    background: url(../images/logo.png) no-repeat left;
+    width: 100px;
+    height: 90px;
+    border-radius: 80%;
+}
+
+header .logo-text {
+    color:#fff;
+    text-decoration: none;
+    padding-top:25px;
+    float:left;
+  
+}
+
+.authAndSearch {
+    float: right;
+    padding-right: 50px;
+    list-style: none;
+}
+
+.authAndSearch li {
+    padding-bottom: 5px;
+    padding-top:5px;
+}
+.li-auth{
+    float:right;
+}
+.auth a {
+    color: #fff;
+}
+
+
+    
+
+.inp_search {
+    background-color: #f3f3f3;
+    border: 1px solid #e7e7e7;
+    height: 30px;
+    color: #696969;
+    padding: 0 9px;
+    vertical-align: top;
+}
+
+.but_search {
+  
+    color: #1B1F20;
+    background-color: #C0C0C0;
+    border: none;
+    height: 30px;
+    width: 60px;
+    
+}
+
+main {
+    height:auto;
+    position: relative;
+}
+
+.left-menu {
+    position:fixed;
+    left:-50px;
+    width: 250px;
+    text-decoration: none;
+    float:left;
+
+}
+nav li {
+    padding: 10px;
+}
+
+.navigation {
+    padding-top: 5px;
+    font-size: 150%;
+}
+
+.navigation li {
+    background: #E7E9E4;
+    font-weight: 600px;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+
+.navigation a {
+    color: #8f8f8f;
+}
+
+
+.content {
+    padding-left: 150px;
+    width: 100%;
+    padding-top: 15px;
+    float:right;
+}
+
+.rasporka{
+ height:17px;   
+}
+
+footer.main {
+    background-color: gray;
+    color: #dbdbdb;
+    position: relative;
+    clear:both;
+ 
+     height: 90px;
+}
+
+
+.f_logo {
+    float: right;
+    margin-top: 20px;
+    font-size: 10px;
+    text-align: right;
+}
+
+.footer-logo {
+    float: right;
+    padding: 13px;
+    width: 40px;
+    height: 30px;
+    border-radius: 90px;
+}
+

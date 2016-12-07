@@ -13,5 +13,17 @@
 
 Route::get('/', 'BaseController@getIndex');
 
+Auth::routes();
 
+
+
+Route::post('/search','SearchController@postIndex');
+
+Route::get('/home', 'HomeController@index');
+
+
+Route::post('/home', 'HomeController@postIndex');
+
+Route::get('/catalog/{id}','CatalogController@getAll');
 Route::get('{id?}', 'StaticController@getIndex')->where('id','[A-Za-z0-9_ +]+');	//последний ROUTE!
+
