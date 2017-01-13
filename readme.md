@@ -28,8 +28,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Установка проекта:
 1) В ОпенСервер перейти в domains
-2) git clone http//...
-3) git laravel
+2) git clone http/github/zhenya_zhitkovsky
+3) git site_on_laravel
 4) composer self-update
 5) composer install
-6) переименовать .env.examlpe в .env
+6) создать пустую БД
+7) переименовать .env.examlpe в .env
+8) В .env подключаемся к БД
+9) php artisan migrate
+

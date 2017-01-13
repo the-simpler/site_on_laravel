@@ -19,6 +19,7 @@ class CreateArticlesTable extends Migration
             $table->integer('category_id');
             $table->string('name', 60);
             $table->string('url',60);
+            $table->text('body');
             $table->string('picture');
             $table->timestamps();
         });

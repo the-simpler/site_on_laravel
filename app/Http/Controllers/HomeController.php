@@ -34,8 +34,8 @@ class HomeController extends Controller
     {   
        
         $r['url']='-';
-        $r['category_id']=54;
-        $r['picture']='-';
+        $pic=\App::make('App\Libs\Imag')->url($_FILES['picture1']['tmp_name'], '/media/photos/');
+        $r['picture']=$pic;
         $r['user_id']=Auth::user()->id;
         Articles::create($r->all());
         return redirect('home');

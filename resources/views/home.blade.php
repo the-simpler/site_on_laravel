@@ -18,7 +18,7 @@ Home
                         @endforeach
                     @endif
 
-                    <form action = "home" method="post">
+                    <form action = "home" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
 
 
@@ -37,7 +37,7 @@ Home
                             </label>
                             <select name="category_id" id="category_id" class="form-control">
                                 @foreach($cats->all() as $one)
-                                <option value="1">
+                                <option value="{{$one->id}}">
                                 {{$one->name}}
                                 </option>
                                  @endforeach  
@@ -60,7 +60,7 @@ Home
                                 Картинка
                             </label>
 
-                            <input type="file" id="pic" class="input-pic form-control"   name="pic"  />
+                            <input type="file" id="picture1" class="input-pic form-control"   name="picture1"  />
                        </div>
 
         
