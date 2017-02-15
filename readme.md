@@ -26,14 +26,16 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 
-Установка проекта:
-1) В ОпенСервер перейти в domains
-2) git clone http/github/zhenya_zhitkovsky
-3) git site_on_laravel
-4) composer self-update
-5) composer install
-6) создать пустую БД
-7) переименовать .env.examlpe в .env
-8) В .env подключаемся к БД
-9) php artisan migrate
+# Установка проекта:
+- В ОпенСервер перейти в domains
+- git clone http/github/zhenya_zhitkovsky
+- git site_on_laravel
+- composer self-update
+- composer install
+- создать пустую БД
+- переименовать .env.examlpe в .env
+- В .env подключаемся к БД
+- php artisan migrate
 
+# Технологии:
+ PHP 7, Laravel 5.2, APACHE-PHP-7
