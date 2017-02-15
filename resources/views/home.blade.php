@@ -2,6 +2,9 @@
 @section('title')
 Home
 @endsection
+@section('styles')
+
+@ensection
 @section('content')
 <div class="container">
     <div class="row">
