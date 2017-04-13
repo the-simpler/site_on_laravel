@@ -1,25 +1,27 @@
 @extends('layouts.base')
 @section('title')
-{{$text->name}}
+{{$product->name}}
 @endsection
 @section('content') 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">{{$text->name}}</div>
-                        @for($text as $one)
-                            if ($one->picture == ' - ')
+                <div class="panel-heading">{{$product->name}}</div>
+                       
+                <div class="panel-body">
+                <h3>{{$product->name}}</h3>
+                        @if ($product->picture == '-')
                                 <img src = '{{asset("/media/photos/no_photo.jpg")}}' />
                             @else
-                                <img src = '{{asset("/media/photos/$one->picture")}}' />
+                                <img src = '{{asset("/uploads/$product->picture")}}' />
                             @endif
-                        @endfor
-                <div class="panel-body">
-                   {{$text->body}} 
+                            <div>{{$product->body}}</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+

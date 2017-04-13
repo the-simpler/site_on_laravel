@@ -2,11 +2,8 @@
 @section('title')
 Home
 @endsection
-@section('styles')
-
-@ensection
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
@@ -34,11 +31,11 @@ Home
                        </div>
 
 
-						<div class="form-group">
-                            <label for="category_id"> 
+						<div class="form-group ">
+                            <label for="categories_id">
                                 Категория
                             </label>
-                            <select name="category_id" id="category_id" class="form-control">
+                            <select name="categories_id" id="categories_id" class="form-control">
                                 @foreach($cats->all() as $one)
                                 <option value="{{$one->id}}">
                                 {{$one->name}}
@@ -63,12 +60,14 @@ Home
                                 Картинка
                             </label>
 
-                            <input type="file" id="picture1" class="input-pic form-control"   name="picture1"  />
+                            <input type="file" id="picture" class="input-pic form-control"   name="picture"  />
+                           {!! Form::hidden('picture_w', 700) !!}
+                           {!! Form::hidden('picture_h', 500) !!}
                        </div>
 
         
 					   <button type="submit" class="btn btn-default btn-block">
-                           Добавить
+                            Добавить
                        </button>
                     </form>
                 <div>

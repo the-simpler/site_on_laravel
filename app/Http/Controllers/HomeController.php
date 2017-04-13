@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use App\Catalog;
-use App\Articles;
+use App\Categories;
+use App\Products;
 use App\Http\Requests\ArticleRequest;
+use App\Http\Requests\CreateProductsRequest;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,17 +28,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $cats=Catalog::where('showhide', 'show')->get();
+        $cats=Categories::where('showhide', 'show')->get();
+        $products = Products::with("user")->with("categories")->get();
         return view('home')->with('cats',$cats);
     }
-     public function postIndex(ArticleRequest $r)
-    {   
-       
-        $r['url']='-';
-        $pic=\App::make('App\Libs\Imag')->url($_FILES['picture1']['tmp_name'], '/media/photos/');
-        $r['picture']=$pic;
-        $r['user_id']=Auth::user()->id;
-        Articles::create($r->all());
+     public function postIndex(CreateProductsRequest $request)
+    {
+
+        $request = $this->saveFiles($request);
+        $request['user_id']=Auth::user()->id;
+        $request['showhide']='show';
+
+        Products::create($request->all());
         return redirect('home');
     }
 }

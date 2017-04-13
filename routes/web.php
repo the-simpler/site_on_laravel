@@ -25,5 +25,10 @@ Route::get('/home', 'HomeController@index');
 Route::post('/home', 'HomeController@postIndex');
 
 Route::get('/catalog/{id}','CatalogController@getAll');
+
+
+Route::post('/subscribe' ,'SubscribeController@postIndex');
+Route::get('/my-subscriptions' ,'SubscribeController@getSubscriptions');
+
 Route::get('{id?}', 'StaticController@getIndex')->where('id','[A-Za-z0-9_ +]+');	//последний ROUTE!
 

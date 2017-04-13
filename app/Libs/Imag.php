@@ -30,6 +30,9 @@ class Imag
             }else{
                 $filename = $name ;
             }
+            $img->resize(700, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
             $img->save($dir . $filename);
 
             $img->resize(200, null, function ($constraint) {
