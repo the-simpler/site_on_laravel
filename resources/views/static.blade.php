@@ -3,9 +3,9 @@
 {{$product->name}}
 @endsection
 @section('content') 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
+
+  
+        
             <div class="panel panel-default">
                 <div class="panel-heading">{{$product->name}}</div>
                        
@@ -17,9 +17,9 @@
                                 <img src = '{{asset("/uploads/$product->picture")}}' />
                             @endif
                             <div>{{$product->body}}</div>
-                </div>
-            </div>
-        </div>
+                
+      
+     
     </div>
 </div>
 @endsection

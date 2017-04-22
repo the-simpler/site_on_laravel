@@ -87,9 +87,9 @@
 
 </header>
 <main>
-    <div class="container-fluid">
+    <div class="col-md-2 left-menu ">
         <div class="row">
-            <div class="left-menu col-md-2">
+            <div class="">
 
                 <nav>
                     <form class="subscribe" action="{{asset('/subscribe')}}" method="POST">
@@ -123,7 +123,7 @@
 
                         </ul>
 
-                        <input name="email" class="inp_subscription" type="text" placeholder="Input E-Mail">
+                        <input name="email" class="inp_subscription" type="email" placeholder="Input E-Mail">
                         <input class="but_subscription" type="submit" value="Subscribe">
 
                     </form>
@@ -134,13 +134,14 @@
                     </form>
                 </nav>
             </div>
-            <div class="content col-md-8">
-                @yield('content')
-            </div>
+            
         </div>
     </div>
+    <div class=" col-md-8 content form_subscription">
+                @yield('content')
+            </div>
 </main>
-<div class="rasporka"></div>
+
 <footer class="main">
     <div class="f_logo">
         <a href="/"><img src="../images/logo.png" alt="Our Site Logo" class="footer-logo"></a>

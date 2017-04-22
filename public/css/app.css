@@ -7819,9 +7819,9 @@
        font-size: 15px;
        position:relative;
        left: -100px;
-       width: 250px;
+      
        text-decoration: none;
-       float:left;
+      
 
    }
    nav li {
@@ -7859,7 +7859,7 @@
        color: #696969;
        padding: 0 9px;
        vertical-align: top;
-       width: 220px;
+       width: 250px;
 
    }
 
@@ -7868,7 +7868,7 @@
        background-color: #C0C0C0;
        border: none;
        height: 30px;
-       width: 220px;
+       width: 250px;
 
    }
    .this-col{
@@ -7881,7 +7881,7 @@
    .content {
 
        padding-top: 15px;
-       float:right;
+      
    }
 
    .input-pic{
